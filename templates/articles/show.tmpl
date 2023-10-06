@@ -1,0 +1,13 @@
+{{define "articles/show.tmpl"}}
+<!DOCTYPE html>
+<html lang="en">
+    {{template "layouts/base/head.tmpl" .article.Title}}
+
+    <body>
+        <h1>{{.article.Title}}</h1>
+        <div>{{.article.Content}}</div>
+
+        {{template "layouts/base/scripts.tmpl"}}
+    </body>
+</html>
+{{end}}

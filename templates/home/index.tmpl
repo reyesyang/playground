@@ -1,0 +1,20 @@
+{{define "home/index.tmpl"}}
+<!DOCTYPE html>
+<html lang="en">
+    {{template "layouts/base/head.tmpl"}}
+    <body>
+        <h1>杨海龙的博客</h1>
+        <div id="articles">
+            {{range .articles}}
+                <div class="article">
+                    <a href="/articles/{{.ID}}">
+                        <h2>{{.Title}}</h2>
+                    </a>
+                </div>
+            {{end}}
+        </div>
+
+        {{template "layouts/base/scripts.tmpl"}}
+    </body>
+</html>
+{{end}}
